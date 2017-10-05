@@ -1,0 +1,80 @@
+body{
+
+}
+
+.square{
+	height: 200px;
+	width: 200px;
+	background-color: #ff0;
+	border: 5px solid black;
+	/* transform property allows you to apply a cool tranformation to an otherwise
+	rectangular element */
+/* 	1. Rotate
+	2. Scale
+	3. Skew
+	4. Translate */
+}
+
+.rotate{
+	/* rotate take, in degrees, the number to rotate */
+	/* transform: rotate(45deg);	 */
+	/* transform: rotateX(45deg);	 */
+	/* transform: rotateY(45deg);	 */
+	transform: rotateZ(45deg);	
+}
+
+.scale{
+	/* scale takes, in %, how large or small to make it relative to base size */
+	/* scale (without X or Y) will apply the number to both  */
+	/* transform: scale(2) */
+	/* transform: scale(.2) */
+	/* scale 2 numbers, will apply the 1st to x-axis, 2nd to y */
+	transform: scale(2,.2);
+	/* you can specify just Y */
+	/* transform: scaleY(.2) */
+}
+
+.skew{
+	/* transform: skew(45deg); */
+	/* transform: skewY(45deg); */
+	transform: skew(45deg, 60deg);
+}
+
+.translate{
+	transform: translate(200px, 100px);
+}
+
+.ball{
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	background-color: blue;
+	color: white;
+/* 	transition - will make the browser apply a transform with math
+	over X period of time. YOU MUST be going from A --> B to apply any math */
+/* 	transition takes 2 args: 
+	1. which transforms to transition
+	2. How long to take to get to point B */
+	transition: all 2s;
+}
+
+.ball:hover{
+	transform: rotate(360deg);
+	background-color: red;
+	border-radius: 50%;
+	margin-left: 500px;
+}
+
+.ball.ease{
+	/* optional 3rd arg is the accel of the transition */
+	transition: all 1s ease-in;
+}
+
+.ball.ease-out{
+	/* optional 3rd arg is the accel of the transition */
+	transition: all 1s ease-out;
+}
+
+.ball.what-the{
+	transition-timing-function: cubic-bezier(1,.03,0,-1.04)
+}
