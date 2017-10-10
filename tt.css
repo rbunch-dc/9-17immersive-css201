@@ -35,13 +35,14 @@ body{
 }
 
 .skew{
-	/* transform: skew(45deg); */
+	transform: skew(45deg);
 	/* transform: skewY(45deg); */
-	transform: skew(45deg, 60deg);
+	/* transform: skew(45deg, 60deg); */
 }
 
 .translate{
-	transform: translate(200px, 100px);
+	/* transform: translate(200px, 100px); */
+	transform: rotate3d(180,90,360,45)
 }
 
 .ball{
@@ -59,10 +60,11 @@ body{
 }
 
 .ball:hover{
-	transform: rotate(360deg);
+	transform: rotate(1360deg);
 	background-color: red;
 	border-radius: 50%;
 	margin-left: 500px;
+	display: inline-block
 }
 
 .ball.ease{
